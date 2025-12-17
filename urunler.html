@@ -6,12 +6,30 @@
     <title>Ürünlerimiz | Waley Profesyonel Hijyen</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        @media (max-width: 992px) {
+            .menu-toggle { display: block !important; font-size: 30px; cursor: pointer; color: #0f172a; line-height: 1; }
+            .nav-desktop { display: none; position: absolute; top: 70px; left: 0; width: 100%; background: white; padding: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); z-index: 1000; }
+            .nav-desktop.active { display: block !important; }
+            .nav-desktop ul { flex-direction: column; gap: 15px; align-items: center; }
+            
+            /* Ürünlerin mobilde alt alta dizilmesi */
+            .grid-4 { grid-template-columns: 1fr !important; gap: 30px !important; }
+            .img-box { height: 280px !important; }
+            .page-banner h1 { font-size: 2rem !important; }
+        }
+        .menu-toggle { display: none; }
+    </style>
 </head>
 <body>
 
     <header class="header-main">
         <div class="header-inner">
             <div class="logo"><a href="index.html"><img src="img/logo.jpg" alt="Waley"></a></div>
+            
+            <div class="menu-toggle" onclick="document.querySelector('.nav-desktop').classList.toggle('active')">☰</div>
+            
             <nav class="nav-desktop">
                 <ul>
                     <li><a href="index.html">ANASAYFA</a></li>
@@ -34,73 +52,79 @@
         <section class="section-padding">
             <div class="container">
                 
-                <div style="margin-bottom: 40px; border-bottom: 2px solid var(--light-bg); padding-bottom: 15px;">
-                    <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--accent);">Çamaşır Bakım Grubu</h2>
+                <div style="margin-bottom: 30px; border-bottom: 2px solid #f1f5f9; padding-bottom: 15px; text-align: left;">
+                    <h2 style="font-size: 1.8rem; font-weight: 800; color: #e21e26;">Çamaşır Bakım Grubu</h2>
                 </div>
                 
-                <div class="grid-4" style="margin-bottom: 80px;">
-                    <div class="card-item">
-                        <div class="img-box" style="height: 250px; margin-bottom: 20px;">
-                            <img src="img/1 (10).jpg" alt="Toz Deterjan 9kg">
+                <div class="grid-4" style="margin-bottom: 60px;">
+                    <div class="card-item" style="background: #f8fafc; border-radius: 20px; padding: 25px; text-align: center;">
+                        <div class="img-box" style="height: 250px; margin-bottom: 20px; background: #fff; border-radius: 15px; display: flex; align-items: center; justify-content: center; padding: 15px;">
+                            <img src="img/1 (10).jpg" alt="Toz Deterjan 9kg" style="max-height: 100%; max-width: 100%; object-fit: contain;">
                         </div>
-                        <h4 style="margin-bottom: 5px;">Toz Deterjan 9kg</h4>
-                        <p style="font-size: 13px; color: var(--text-soft);">Renkliler & Beyazlar</p>
+                        <h4 style="font-weight: 800;">Toz Deterjan 9kg</h4>
+                        <p style="font-size: 13px; color: #64748b;">Renkliler & Beyazlar</p>
                     </div>
-                    <div class="card-item">
-                        <div class="img-box" style="height: 250px; margin-bottom: 20px;">
-                            <img src="img/1 (5).jpg" alt="Toz Deterjan 3kg">
+
+                    <div class="card-item" style="background: #f8fafc; border-radius: 20px; padding: 25px; text-align: center;">
+                        <div class="img-box" style="height: 250px; margin-bottom: 20px; background: #fff; border-radius: 15px; display: flex; align-items: center; justify-content: center; padding: 15px;">
+                            <img src="img/1 (5).jpg" alt="Toz Deterjan 3kg" style="max-height: 100%; max-width: 100%; object-fit: contain;">
                         </div>
-                        <h4 style="margin-bottom: 5px;">Toz Deterjan 3kg</h4>
-                        <p style="font-size: 13px; color: var(--text-soft);">Ekonomik Paket</p>
+                        <h4 style="font-weight: 800;">Toz Deterjan 3kg</h4>
+                        <p style="font-size: 13px; color: #64748b;">Ekonomik Paket</p>
                     </div>
-                    <div class="card-item">
-                        <div class="img-box" style="height: 250px; margin-bottom: 20px;">
-                            <img src="img/1 (4).jpg" alt="Sıvı Deterjan">
+
+                    <div class="card-item" style="background: #f8fafc; border-radius: 20px; padding: 25px; text-align: center;">
+                        <div class="img-box" style="height: 250px; margin-bottom: 20px; background: #fff; border-radius: 15px; display: flex; align-items: center; justify-content: center; padding: 15px;">
+                            <img src="img/1 (4).jpg" alt="Sıvı Deterjan" style="max-height: 100%; max-width: 100%; object-fit: contain;">
                         </div>
-                        <h4 style="margin-bottom: 5px;">Sıvı Deterjan</h4>
-                        <p style="font-size: 13px; color: var(--text-soft);">Hassas Dokular</p>
+                        <h4 style="font-weight: 800;">Sıvı Deterjan</h4>
+                        <p style="font-size: 13px; color: #64748b;">Hassas Dokular</p>
                     </div>
-                    <div class="card-item">
-                        <div class="img-box" style="height: 250px; margin-bottom: 20px;">
-                            <img src="img/1 (1).jpg" alt="Yumuşatıcı">
+
+                    <div class="card-item" style="background: #f8fafc; border-radius: 20px; padding: 25px; text-align: center;">
+                        <div class="img-box" style="height: 250px; margin-bottom: 20px; background: #fff; border-radius: 15px; display: flex; align-items: center; justify-content: center; padding: 15px;">
+                            <img src="img/1 (1).jpg" alt="Yumuşatıcı" style="max-height: 100%; max-width: 100%; object-fit: contain;">
                         </div>
-                        <h4 style="margin-bottom: 5px;">Konsantre Yumuşatıcı</h4>
-                        <p style="font-size: 13px; color: var(--text-soft);">Uzun Süre Kalıcı Parfüm</p>
+                        <h4 style="font-weight: 800;">Konsantre Yumuşatıcı</h4>
+                        <p style="font-size: 13px; color: #64748b;">Lila Ferahlığı</p>
                     </div>
                 </div>
 
-                <div style="margin-bottom: 40px; border-bottom: 2px solid var(--light-bg); padding-bottom: 15px;">
-                    <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--accent);">Ev & Kişisel Hijyen</h2>
+                <div style="margin-bottom: 30px; border-bottom: 2px solid #f1f5f9; padding-bottom: 15px; text-align: left;">
+                    <h2 style="font-size: 1.8rem; font-weight: 800; color: #e21e26;">Ev & Kişisel Hijyen</h2>
                 </div>
 
                 <div class="grid-4">
-                    <div class="card-item">
-                        <div class="img-box" style="height: 250px; margin-bottom: 20px;">
-                            <img src="img/1 (7).jpg" alt="Islak Havlu">
+                    <div class="card-item" style="background: #f8fafc; border-radius: 20px; padding: 25px; text-align: center;">
+                        <div class="img-box" style="height: 250px; margin-bottom: 20px; background: #fff; border-radius: 15px; display: flex; align-items: center; justify-content: center; padding: 15px;">
+                            <img src="img/1 (7).jpg" alt="Islak Havlu" style="max-height: 100%; max-width: 100%; object-fit: contain;">
                         </div>
-                        <h4 style="margin-bottom: 5px;">Çok Amaçlı Islak Havlu</h4>
-                        <p style="font-size: 13px; color: var(--text-soft);">Pratik Hijyen</p>
+                        <h4 style="font-weight: 800;">Islak Havlu</h4>
+                        <p style="font-size: 13px; color: #64748b;">90'lı Pratik Paket</p>
                     </div>
-                    <div class="card-item">
-                        <div class="img-box" style="height: 250px; margin-bottom: 20px;">
-                            <img src="img/1 (6).jpg" alt="Yüzey Temizleyici">
+
+                    <div class="card-item" style="background: #f8fafc; border-radius: 20px; padding: 25px; text-align: center;">
+                        <div class="img-box" style="height: 250px; margin-bottom: 20px; background: #fff; border-radius: 15px; display: flex; align-items: center; justify-content: center; padding: 15px;">
+                            <img src="img/1 (6).jpg" alt="Yüzey Temizleyici" style="max-height: 100%; max-width: 100%; object-fit: contain;">
                         </div>
-                        <h4 style="margin-bottom: 5px;">Yüzey Temizleyici</h4>
-                        <p style="font-size: 13px; color: var(--text-soft);">Mersin Limonu Ferahlığı</p>
+                        <h4 style="font-weight: 800;">Yüzey Temizleyici</h4>
+                        <p style="font-size: 13px; color: #64748b;">Baharı Ferahlığı</p>
                     </div>
-                    <div class="card-item">
-                        <div class="img-box" style="height: 250px; margin-bottom: 20px;">
-                            <img src="img/1 (9).jpg" alt="Sıvı Sabun">
+
+                    <div class="card-item" style="background: #f8fafc; border-radius: 20px; padding: 25px; text-align: center;">
+                        <div class="img-box" style="height: 250px; margin-bottom: 20px; background: #fff; border-radius: 15px; display: flex; align-items: center; justify-content: center; padding: 15px;">
+                            <img src="img/1 (9).jpg" alt="Sıvı Sabun" style="max-height: 100%; max-width: 100%; object-fit: contain;">
                         </div>
-                        <h4 style="margin-bottom: 5px;">Sıvı El Sabunu</h4>
-                        <p style="font-size: 13px; color: var(--text-soft);">Nemlendirici Etkili</p>
+                        <h4 style="font-weight: 800;">Sıvı El Sabunu</h4>
+                        <p style="font-size: 13px; color: #64748b;">Nemlendirici Etkili</p>
                     </div>
-                    <div class="card-item">
-                        <div class="img-box" style="height: 250px; margin-bottom: 20px;">
-                            <img src="img/1 (8).jpg" alt="Deterjan 6kg">
+
+                    <div class="card-item" style="background: #f8fafc; border-radius: 20px; padding: 25px; text-align: center;">
+                        <div class="img-box" style="height: 250px; margin-bottom: 20px; background: #fff; border-radius: 15px; display: flex; align-items: center; justify-content: center; padding: 15px;">
+                            <img src="img/1 (8).jpg" alt="Deterjan 6kg" style="max-height: 100%; max-width: 100%; object-fit: contain;">
                         </div>
-                        <h4 style="margin-bottom: 5px;">Toz Deterjan 6kg</h4>
-                        <p style="font-size: 13px; color: var(--text-soft);">Aile Boyu</p>
+                        <h4 style="font-weight: 800;">Toz Deterjan 6kg</h4>
+                        <p style="font-size: 13px; color: #64748b;">Ekonomik Boy</p>
                     </div>
                 </div>
 
@@ -108,14 +132,9 @@
         </section>
     </main>
 
-    <footer class="footer-main">
+    <footer class="footer-main" style="background: #0f172a; color: #fff; padding: 40px 0; text-align: center;">
         <div class="container">
-            <div class="footer-grid">
-                <div><img src="img/logo.jpg" style="height: 35px; filter: brightness(0) invert(1);" alt="Waley"></div>
-                <div><h4>Menü</h4><a href="index.html" style="color: #ccc; display: block; margin-top: 10px;">Anasayfa</a></div>
-                <div><h4>İletişim</h4><p style="color: #ccc; margin-top: 10px;">info@waleydeterjan.com</p></div>
-            </div>
-            <div class="footer-bottom">&copy; 2025 Waley Deterjan. Tüm Hakları Saklıdır.</div>
+            <p style="font-size: 13px; opacity: 0.5;">© 2025 Waley Deterjan. Tüm Hakları Saklıdır.</p>
         </div>
     </footer>
 

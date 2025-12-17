@@ -6,12 +6,36 @@
     <title>Kurumsal | Waley Profesyonel Hijyen</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        @media (max-width: 992px) {
+            .menu-toggle { display: block !important; font-size: 30px; cursor: pointer; color: #0f172a; line-height: 1; }
+            .nav-desktop { display: none; position: absolute; top: 70px; left: 0; width: 100%; background: white; padding: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); z-index: 1000; }
+            .nav-desktop.active { display: block !important; }
+            .nav-desktop ul { flex-direction: column; gap: 15px; align-items: center; }
+            
+            /* Mobilde alt alta dizilme */
+            .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr !important; text-align: center; gap: 40px; }
+            
+            .img-box { height: 350px !important; margin-bottom: 20px; }
+            .page-banner h1 { font-size: 1.8rem !important; }
+            
+            /* Sertifika kutularının mobilde düzgün durması */
+            .cert-container { justify-content: center !important; gap: 15px !important; }
+        }
+        
+        /* Ekstra görselleştirme stili */
+        .menu-toggle { display: none; }
+    </style>
 </head>
 <body>
 
     <header class="header-main">
         <div class="header-inner">
             <div class="logo"><a href="index.html"><img src="img/logo.jpg" alt="Waley"></a></div>
+            
+            <div class="menu-toggle" onclick="document.querySelector('.nav-desktop').classList.toggle('active')">☰</div>
+            
             <nav class="nav-desktop">
                 <ul>
                     <li><a href="index.html">ANASAYFA</a></li>
@@ -33,20 +57,20 @@
 
         <section class="section-padding">
             <div class="container grid-2">
-                <div class="img-box" style="height: 550px;">
-                    <img src="img/ana2.jpg" alt="Waley Üretim ve Vizyon">
+                <div class="img-box" style="height: 550px; background: #f8fafc; border-radius: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                    <img src="img/ana2.jpg" alt="Waley Üretim ve Vizyon" style="max-width: 100%; max-height: 100%; object-fit: cover;">
                 </div>
-                <div class="about-text">
+                <div class="about-text" style="text-align: left;">
                     <h2 style="font-size: 2.5rem; margin-bottom: 25px; line-height: 1.2;">Gelecek Nesiller İçin <br>Daha Temiz Bir Dünya</h2>
-                    <p style="margin-bottom: 20px; color: var(--text-soft); font-size: 1.1rem;">Waley, hijyen teknolojilerinde küresel bir marka olma vizyonuyla, 15.000 metrekarelik modern tesislerinde dünya standartlarında üretim yapmaktadır. Kurulduğumuz günden bu yana, "Koşulsuz Temizlik" ilkesini yenilikçi AR-GE çalışmalarımızla birleştiriyoruz.</p>
-                    <p style="margin-bottom: 30px; color: var(--text-soft); font-size: 1.1rem;">Sürdürülebilirlik odağımızla, doğada çözünebilen formüller geliştiriyor; evlerinizdeki hijyeni sağlarken çevremizi korumayı en büyük sorumluluğumuz olarak görüyoruz.</p>
+                    <p style="margin-bottom: 20px; color: #64748b; font-size: 1.1rem;">Waley, hijyen teknolojilerinde küresel bir marka olma vizyonuyla, 15.000 metrekarelik modern tesislerinde dünya standartlarında üretim yapmaktadır.</p>
+                    <p style="margin-bottom: 30px; color: #64748b; font-size: 1.1rem;">Sürdürülebilirlik odağımızla, doğada çözünebilen formüller geliştiriyor; evlerinizdeki hijyeni sağlarken çevremizi korumayı en büyük sorumluluğumuz olarak görüyoruz.</p>
                     
-                    <div class="mini-features grid-2" style="gap: 20px;">
-                        <div style="padding: 15px; border-left: 4px solid var(--accent); background: var(--light-bg);">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div style="padding: 15px; border-left: 4px solid #e21e26; background: #f8fafc;">
                             <strong>Global İhracat</strong>
                             <p style="font-size: 13px;">50'den fazla ülkede Waley kalitesi.</p>
                         </div>
-                        <div style="padding: 15px; border-left: 4px solid var(--accent); background: var(--light-bg);">
+                        <div style="padding: 15px; border-left: 4px solid #e21e26; background: #f8fafc;">
                             <strong>AR-GE Gücü</strong>
                             <p style="font-size: 13px;">Sürekli yenilenen patentli formüller.</p>
                         </div>
@@ -55,7 +79,7 @@
             </div>
         </section>
 
-        <section style="background: var(--dark); color: #fff; padding: 100px 0;">
+        <section style="background: #0f172a; color: #fff; padding: 100px 0;">
             <div class="container grid-3">
                 <div style="text-align: center; padding: 0 20px;">
                     <div style="font-size: 40px; margin-bottom: 15px;">🎯</div>
@@ -75,23 +99,23 @@
             </div>
         </section>
 
-        <section class="section-padding" style="background: var(--light-bg);">
+        <section class="section-padding" style="background: #f8fafc;">
             <div class="container" style="text-align: center;">
                 <span class="eyebrow">SAYILARLA WALEY</span>
                 <h2 style="margin-bottom: 60px; font-size: 2.8rem;">Üretimdeki Gücümüz</h2>
                 <div class="grid-4">
-                    <div><h3 style="font-size: 3rem; color: var(--accent);">25+</h3><p>Yıllık Tecrübe</p></div>
-                    <div><h3 style="font-size: 3rem; color: var(--accent);">15.000</h3><p>Kapalı Alan (m²)</p></div>
-                    <div><h3 style="font-size: 3rem; color: var(--accent);">400+</h3><p>Satış Noktası</p></div>
-                    <div><h3 style="font-size: 3rem; color: var(--accent);">200</h3><p>Uzman Personel</p></div>
+                    <div class="stat-item"><h3>25+</h3><p>Yıllık Tecrübe</p></div>
+                    <div class="stat-item"><h3>15.000</h3><p>Kapalı Alan (m²)</p></div>
+                    <div class="stat-item"><h3>400+</h3><p>Satış Noktası</p></div>
+                    <div class="stat-item"><h3>200</h3><p>Uzman Personel</p></div>
                 </div>
             </div>
         </section>
 
         <section class="section-padding">
-            <div class="container text-center">
-                <h2 style="margin-bottom: 40px;">Uluslararası Kalite Sertifikalarımız</h2>
-                <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; opacity: 0.5;">
+            <div class="container" style="text-align: center;">
+                <h2 style="margin-bottom: 40px;">Kalite Sertifikalarımız</h2>
+                <div class="cert-container" style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; opacity: 0.5;">
                     <div style="border: 2px solid #ccc; padding: 10px 25px; border-radius: 8px; font-weight: 800;">ISO 9001</div>
                     <div style="border: 2px solid #ccc; padding: 10px 25px; border-radius: 8px; font-weight: 800;">ISO 14001</div>
                     <div style="border: 2px solid #ccc; padding: 10px 25px; border-radius: 8px; font-weight: 800;">GMP</div>
@@ -102,14 +126,12 @@
         </section>
     </main>
 
-    <footer class="footer-main">
+    <footer class="footer-main" style="background: #0f172a; color: #fff; padding: 60px 0 30px;">
         <div class="container">
-            <div class="footer-grid">
-                <div><img src="img/logo.jpg" style="height: 35px; filter: brightness(0) invert(1);" alt="Waley"></div>
-                <div><h4>Menü</h4><a href="index.html" style="color: #ccc; display: block; margin-top: 10px;">Anasayfa</a></div>
-                <div><h4>İletişim</h4><p style="color: #ccc; margin-top: 10px;">info@waleydeterjan.com</p></div>
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <img src="img/logo.jpg" style="height: 35px; filter: brightness(0) invert(1);" alt="Waley">
+                <p style="font-size: 13px; opacity: 0.5;">© 2025 Waley Deterjan. Tüm Hakları Saklıdır.</p>
             </div>
-            <div class="footer-bottom">&copy; 2025 Waley Deterjan. Tüm Hakları Saklıdır.</div>
         </div>
     </footer>
 
